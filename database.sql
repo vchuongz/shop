@@ -17,7 +17,7 @@ CREATE TABLE users(
 ALTER TABLE users ADD COLUMN role_id INT;
 
 CREATE TABLE roles(
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY ,
     name VARCHAR(20) NOT NULL 
 );
 ALTER TABLE users ADD FOREIGN KEY (role_id) REFERENCES roles (id);
@@ -50,7 +50,7 @@ CREATE TABLE categories(
     name varchar(100) NOT NULL DEFAULT '' COMMENT 'Tên danh mục, vd: đồ điện tử'
 );
 
---Bảng chứa sản phẩm(Product): "laptop macbook air 15 inch 2023", iphone 15 pro,...
+--Bảng chứa sản pẩm(Product): "laptop macbook air 15 inch 2023", iphone 15 pro,...
 CREATE TABLE products (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(350) COMMENT 'Tên sản phẩm',
